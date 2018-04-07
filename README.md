@@ -8,7 +8,7 @@ Your content goes here.
 {% endtab %}
 
 {% tab title="Create a cart" %}
-Your content goes here.
+test
 {% endtab %}
 
 {% tab title="Add to cart" %}
@@ -19,4 +19,6 @@ Your content goes here.
 
 {% endtab %}
 {% endtabs %}
+
+
 
