@@ -22,6 +22,12 @@ For order Line Item with a product then the nested order line item is merely for
 
 For order line item without a product if it has one or more children then you will no longer be able to set the sub total, instead the sub total will always be calculated using the sum of all its children's sub total. You can only set the sub total for order line item without a product that does not have any children.
 
+## Diagram
+
+Below is a diagram illustrating the structure of the order line item depending the kind of product it is for and whether it is for a product or not. Click to zoom in.
+
+![](../.gitbook/assets/order-line-item.png)
+
 ## Next Steps
 
 {% page-ref page="../fulfillment.md" %}
