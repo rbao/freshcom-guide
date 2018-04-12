@@ -16,7 +16,15 @@ You can set specific order line item to be auto fulfilled, this is useful for or
 
 ## Return
 
-Fulfillment can be returned by creating a return package and a return item for the fulfillment item.
+Fulfillment can be returned by creating a return package and a return item for the fulfillment item. An order line item is fully returned if the sum of its return item is equal or greater than the order quantity. A order is considered fully returned if all of its top level order line item is returned. Return requires a fulfillment item, which means if a order has not yet been fulfilled it cannot be returned. Below is a diagram illustrating an example a return for two fulfillment packages. Click to zoom in.
 
-## 
+![](.gitbook/assets/return.png)
+
+Each return package can contain multiple return item which may be for fulfillment item of different packages. You can also create multiple return packages, note that return package itself is independent to fulfillment package. Only the return item depends on fulfillment item.
+
+## Next Steps
+
+{% page-ref page="inventory.md" %}
+
+
 
