@@ -24,7 +24,7 @@ For order line item without a product if it has one or more children then you wi
 
 ## Diagram
 
-Below is a diagram illustrating the structure of the order line item depending the kind of product it is for and whether it is for a product or not. Click to zoom in.
+Below is a diagram illustrating the structure of the order line item depending the kind of product it is for and whether it is for a product or not. Green block in the diagram represent the root order line items. Click to zoom in. 
 
 ![](../.gitbook/assets/order-line-item.png)
 
