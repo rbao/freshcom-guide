@@ -13,6 +13,8 @@
   * [Two Factor Authentication](untitled/two-factor-authentication.md)
 * [Point Account](point-account.md)
 * [Fulfillment & Return](fulfillment.md)
-* Inventory
-* [Notification](notification.md)
+* [Inventory](inventory.md)
+* [Notification](notification/README.md)
+  * [Email & SMS Template](notification/email-and-sms-template.md)
+* Javascript SDK Reference
 

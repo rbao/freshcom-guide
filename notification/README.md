@@ -14,5 +14,9 @@ Each event emitted from Freshcom also comes with some event data, for example if
 
 For details on which events are available and the event data associated with them please see each individual endpoint in your API references. In general event is only emitted when you use the API or the Dashboard to create, update and delete a resource.
 
+## Next Steps
+
+{% page-ref page="email-and-sms-template.md" %}
+
 
 

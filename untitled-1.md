@@ -63,7 +63,7 @@ In some cases you may not want to unlock the unlockable right after a customer c
 
 You can also enable or disable the auto fulfill on a per order basis by simply setting the auto fulfill fields of the order line item with the unlockable product. The auto fulfill field of order line item will overwrite the product's auto fulfill value.
 
-If you have your own backend that have custom logic to process the unlock then you can also create a notification trigger to trigger a webhook request. Please see our guide on [notification](notification.md) for how to setup webhook.
+If you have your own backend that have custom logic to process the unlock then you can also create a notification trigger to trigger a webhook request. Please see our guide on [notification](notification/) for how to setup webhook.
 
 ### Listing Product with Unlocked Unlockable
 

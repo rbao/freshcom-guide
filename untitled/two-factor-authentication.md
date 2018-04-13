@@ -3,7 +3,7 @@
 For business that require extra security for their customer, Freshcom allow you to use two factor authentication \(TFA\). If you are selling a secret weapon, you probably want to use this to be double sure the customer is who they say there are.
 
 {% hint style="info" %}
-In order to actually send the verification code needed for TFA to the customer's email or phone number you must create a notification trigger for the appropriate event. Please see our guide on [notification](../notification.md) for sending email and text message.
+In order to actually send the verification code needed for TFA to the customer's email or phone number you must create a notification trigger for the appropriate event. Please see our guide on [notification](../notification/) for sending email and text message.
 {% endhint %}
 
 
