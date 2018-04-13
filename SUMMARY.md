@@ -16,5 +16,5 @@
 * [Inventory](inventory.md)
 * [Notification](notification/README.md)
   * [Email & SMS Template](notification/email-and-sms-template.md)
-* [Javascript SDK Reference](javascript-sdk-reference.md)
+* [JavaScript SDK Reference](javascript-sdk-reference.md)
 

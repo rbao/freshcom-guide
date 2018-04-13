@@ -1,4 +1,4 @@
-# Javascript SDK Reference
+# JavaScript SDK Reference
 
 ## Introduction
 
@@ -6,11 +6,142 @@
 
 ### Fields
 
-The Freshcom API serializes data to conform with JSON API format, however the serialized format is not the most convenient format to use for your client side application so the Freshcom SDK accept a unserialized object and will attempt to serialize it following a few conventions. 
+The Freshcom API only accepts request body in JSON API format, however this format may not the most convenient format to use for your client side application. This is why by default most method in the JavaScript SDK accept a unserialized object containing all the fields of a resource and will attempt to serialize it to JSON API format and then send the request using the serialized version of it. This unserialized object that the Javascript SDK accept is what we call the fields object.
 
-The fields object is a plain javascript object with one requirement: it must have a `type` property and the value of it must be a `String`. 
+The fields object is a plain JavaScript object containing all the fields of a resource. Its only requirement is that it must have a `type` property and the value of it must be a `String`.
+
+If the property of the fields object matches the following condition then those property will be serialized as the relationships of the resource:
+
+* the property's value is an `Object` with a `type` property; or
+* the property's value is an `Array` 
+
+All other property will be serialized as the attributes of the resource. Below is an example of a valid fields object and its the JSON object after serialization.
+
+{% tabs %}
+{% tab title="Fields Object" %}
+```javascript
+{
+  type: 'Product',
+  kind: 'simple',
+  name: 'Red Starship',
+  goods: {
+    id: '9fc8ee53-906f-48bd-a392-8b0709301699',
+    type: 'Stockable'
+  }
+}
+```
+{% endtab %}
+
+{% tab title="Serialized" %}
+```javascript
+{
+  "data": {
+    "type": "Product",
+    "attributes": {
+      "kind": "simple",
+      "name": "Red Starship"
+    },
+    "relationships": {
+      "goods": {
+        "data": {
+          "id": "9fc8ee53-906f-48bd-a392-8b0709301699",
+          "type": "Stockable"
+        }
+      }
+    }
+  }
+}
+```
+{% endtab %}
+{% endtabs %}
+
+By default, all SDK methods that accepts a fields object will automatically serialize it before sending the request to the API, if you do not want the SDK to serialize the data for you and want to handle the serialization yourself then you can set `serializeFields` to `false` in the options object, in this case the SDK will treat the fields object as if it is already serialized.
 
 ### Response
+
+The Freshcom API only return response body in JSON API format, however this format may not the most convenient format to use for your client side application. This is why by default response returned from the JavaScript SDK will automatically deserialize the data. The SDK will only serialize the data and errors section of the response, meta and other sections if any will not be deserialized.
+
+Below is an example of JSON response from the API containing a data section and its corresponding deserialized response.
+
+{% tabs %}
+{% tab title="API Response" %}
+```javascript
+{
+  "meta": {
+    "locale": "en"
+  },
+  "data": {
+    "id": "74b901b2-32f9-4e3b-8d4d-4eca2360550c",
+    "type": "Product",
+    "attributes": {
+      "kind": "simple",
+      "name": "Red Starship"
+    },
+    "relationships": {
+      "goods": {
+        "data": {
+          "id": "9fc8ee53-906f-48bd-a392-8b0709301699",
+          "type": "Stockable"
+        }
+      }
+    }
+  }
+}
+```
+{% endtab %}
+
+{% tab title="Deserialized Response" %}
+```javascript
+{
+  meta: {
+    locale: 'en'
+  },
+  data: {
+    id: '74b901b2-32f9-4e3b-8d4d-4eca2360550c',
+    type: 'Product',
+    kind: 'simple',
+    name: 'Red Starship',
+    goods: {
+      id: '9fc8ee53-906f-48bd-a392-8b0709301699',
+      type: 'Stockable'
+    }
+  }  
+}
+```
+{% endtab %}
+{% endtabs %}
+
+Below is an example of JSON response from the API containing a errors section and its corresponding deserialized response.
+
+{% tabs %}
+{% tab title="API Response" %}
+```javascript
+{
+  "errors": [
+    {
+      "code": "required",
+      "source": {
+        "pointer": "/data/attributes/name"
+      },
+      "title": "Name is required"
+    }
+  ]
+}
+```
+{% endtab %}
+
+{% tab title="Deserialized Response" %}
+```javascript
+{
+  errors: {
+    name: [{code: "required", title: "Name is required"}]
+  }
+}
+```
+{% endtab %}
+{% endtabs %}
+
+By Default, all SDK methods returns response object will automatically deserialize the appropriate sections of the response. If you do not want the SDK to deserialize the data for you and want to handle the deserialization yourself, then you can set `deserializeResponse` to `false` in the options object. If you just want to keep to the raw response together with the deserialize response then you can set `keepRawResponse` to `true`, and the raw response will be included in the deserialized response and you can access it using `response.raw`.
 
 ### Options
 
