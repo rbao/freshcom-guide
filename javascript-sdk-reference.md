@@ -141,9 +141,15 @@ Below is an example of JSON response from the API containing a errors section an
 {% endtab %}
 {% endtabs %}
 
-By Default, all SDK methods returns response object will automatically deserialize the appropriate sections of the response. If you do not want the SDK to deserialize the data for you and want to handle the deserialization yourself, then you can set `deserializeResponse` to `false` in the options object. If you just want to keep to the raw response together with the deserialize response then you can set `keepRawResponse` to `true`, and the raw response will be included in the deserialized response and you can access it using `response.raw`.
+By default, all SDK methods returns response object will automatically deserialize the appropriate sections of the response. If you do not want the SDK to deserialize the data for you and want to handle the deserialization yourself, then you can set `deserializeResponse` to `false` in the options object. If you just want to keep to the raw response together with the deserialize response then you can set `keepRawResponse` to `true`, and the raw response will be included in the deserialized response and you can access it using `response.raw`.
 
 ### Options
+
+Most SDK methods accepts an optional options object with the following property:
+
+* `serializeFields` `Boolean` \(default: `true`\) - If the methods as a fields object indicate whether to serialize the fields or not.
+* `deserializeResponse` `Boolean` \(default: `true` \) - If the method returns a response or a `Promise` that resolves to a response indicate whether to deserialize the response or not.
+* `keepRawResponse` `Boolean` \(default: `false`\) - If the method returns a deserialized response or a `Promise` that resolves to a deserialized response indicate whether to keep the raw response.
 
 ## Authentication
 
