@@ -6,7 +6,7 @@
 
 ### Fields
 
-The Freshcom API serializes data to conform with JSON API format, however the serialized format is not the most convenient format to use for your client side application so the Freshcom SDK will
+The Freshcom API serializes data to conform with JSON API format, however the serialized format is not the most convenient format to use for your client side application so the Freshcom SDK accept a unserialized object and will attempt to serialize it following a few conventions. 
 
 The fields object is a plain javascript object with one requirement: it must have a `type` property and the value of it must be a `String`. 
 
