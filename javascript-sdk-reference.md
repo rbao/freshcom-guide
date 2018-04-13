@@ -6,9 +6,7 @@
 
 ### Fields
 
-The Freshcom API only accepts request body in JSON API format, however this format may not the most convenient format to use for your client side application. This is why by default most method in the JavaScript SDK accept a unserialized object containing all the fields of a resource and will attempt to serialize it to JSON API format and then send the request using the serialized version of it. This unserialized object that the Javascript SDK accept is what we call the fields object.
-
-The fields object is a plain JavaScript object containing all the fields of a resource. Its only requirement is that it must have a `type` property and the value of it must be a `String`.
+The Freshcom API only accepts request body in JSON API format, however this format may not be the most convenient format to use for your client side application. This is why by default most method in the JavaScript SDK accept a unserialized object containing all the fields of a resource and will attempt to serialize it to JSON API format and then send the request using the serialized version of it. This unserialized object that the Javascript SDK accept is what we call the fields object. The fields object is a plain JavaScript object containing all the fields of a resource.
 
 If the property of the fields object matches the following condition then those property will be serialized as the relationships of the resource:
 
@@ -59,7 +57,7 @@ By default, all SDK methods that accepts a fields object will automatically seri
 
 ### Response
 
-The Freshcom API only return response body in JSON API format, however this format may not the most convenient format to use for your client side application. This is why by default response returned from the JavaScript SDK will automatically deserialize the data. The SDK will only serialize the data and errors section of the response, meta and other sections if any will not be deserialized.
+The Freshcom API only return response body in JSON API format, however this format may not be the most convenient format to use for your client side application. This is why by default response returned from the JavaScript SDK will automatically deserialize the data. The SDK will only serialize the data and errors section of the response, meta and other sections if any will not be deserialized.
 
 Below is an example of JSON response from the API containing a data section and its corresponding deserialized response.
 
@@ -141,24 +139,27 @@ Below is an example of JSON response from the API containing a errors section an
 {% endtab %}
 {% endtabs %}
 
-By default, all SDK methods returns response object will automatically deserialize the appropriate sections of the response. If you do not want the SDK to deserialize the data for you and want to handle the deserialization yourself, then you can set `deserializeResponse` to `false` in the options object. If you just want to keep to the raw response together with the deserialize response then you can set `keepRawResponse` to `true`, and the raw response will be included in the deserialized response and you can access it using `response.raw`.
+By default, all SDK methods returns response object will automatically deserialize the appropriate sections of the response. If you do not want the SDK to deserialize the data for you and want to handle the deserialization yourself, then you can set `deserializeResponseData` or `deserializeResponseErrors` to `false` in the options object. If you just want to keep to the raw response together with the deserialize response then you can set `keepRawResponse` to `true`, and the raw response will be included in the deserialized response and you can access it using `response.raw`.
 
 ### Options
 
 Most SDK methods accepts an optional options object with the following property:
 
 * `serializeFields` `Boolean` \(default: `true`\) - If the methods as a fields object indicate whether to serialize the fields or not.
-* `deserializeResponse` `Boolean` \(default: `true` \) - If the method returns a response or a `Promise` that resolves to a response indicate whether to deserialize the response or not.
+* `deserializeResponseData` `Boolean` \(default: `true` \) - If the method returns a response or a `Promise` that resolves to a response indicate whether to deserialize the response data or not.
+* `deserializeResponseErrors` `Boolean` \(default: `true`\) - If the method returns a response or a `Promise` that resolves to a response indicate whether to deserialize the response errors or not.
 * `keepRawResponse` `Boolean` \(default: `false`\) - If the method returns a deserialized response or a `Promise` that resolves to a deserialized response indicate whether to keep the raw response.
 
 ## Authentication
 
-### .createAccessToken\(payload\)
+### .createAccessToken
+
+`freshcom.createAccessToken(payload)`
 
 Create a access token using the provided username and password, or refresh token.
 
 {% tabs %}
-{% tab title="First Tab" %}
+{% tab title="Arguments" %}
 * `payload` `Object` - The payload, see below for details.
 * `payload.username` `String` - The username to use.
 * `payload.password` `String` - The password to use.
@@ -172,7 +173,9 @@ Returns a `Promise` that resolved to a `Response` object if successful.
 {% endtab %}
 {% endtabs %}
 
-### .setAccessToken\(accessToken\)
+### .setAccessToken
+
+`freshcom.setAccessToken(accessToken`
 
 Sets the access token to use for all subsequent request.
 
@@ -194,7 +197,9 @@ freshcom.setAccessToken('{access_token}')
 {% endtab %}
 {% endtabs %}
 
-### .setRefreshToken\(refreshToken\)
+### .setRefreshToken
+
+`freshcom.setRefreshToken(refreshToken)`
 
 Sets the refresh token to use when attempting to refresh the access token. If a refresh token is set then whenever a 401 is received from the API, the SDK will try to refresh the access token and and re-attempt the request. This will only happen once, if the re-attempt failed or if refreshing the access token failed then it will not be retried again.
 
@@ -215,6 +220,92 @@ freshcom.setAccessToken('prt-test-827ae785-1502-4489-8a97-609c4840168')
 ```
 {% endtab %}
 {% endtabs %}
+
+## Internationalization
+
+### .setDefaultLocale
+
+`freshcom.setDefaultLocal(defaultLocale)`
+
+Sets the default locale to use for all subsequent request. Locale can still be overwritten using the params arguments for specific methods.
+
+{% tabs %}
+{% tab title="Arguments" %}
+* `defaultLocale` `String`  - The default locale to use.
+{% endtab %}
+
+{% tab title="Returns" %}
+Returns `undefined`.
+{% endtab %}
+
+{% tab title="Usage" %}
+```javascript
+import freshcom from 'freshcom-sdk'
+
+freshcom.setDefaultLocale('zh-CN')
+```
+{% endtab %}
+{% endtabs %}
+
+## Identity
+
+### .retrieveAccount
+
+`freshcom.retrieveAccount([params, options])`
+
+### .updateAccount
+
+`freshcom.updateAccount(fields, [params, options])`
+
+### .retrieveCurrentUser
+
+`freshcom.retrieveCurrentUser([params, options])`
+
+### .updateCurrentUser
+
+`freshcom.updateCurrentUser(fields, [params, options])`
+
+### .retrieveUser
+
+`freshcom.retrieveUser(identifiers, [params, options])`
+
+### .updateUser
+
+`freshcom.updateUser(identifiers, fields, [params, options])`
+
+### .createEmailVerificationToken
+
+`freshcom.createEmailVerificationToken(fields, [params, options])`
+
+### .createEmailVerification
+
+`freshcom.createEmailVerification(fields, [params, options])`
+
+### .createPhoneVerificationCode
+
+`freshcom.createPhoneVerificationCode(fields, [params, options])`
+
+### .createPasswordResetToken
+
+`freshcom.createPasswordResetToken(fields, [params, options])`
+
+### .updatePassword
+
+`freshcom.updatePassword(identifiers, fields, [params, options])` 
+
+## Storefront
+
+### .listOrder
+
+`freshcom.listOrder([params, options])`
+
+### .createOrder
+
+`freshcom.createOrder([fields, params, options])`
+
+### .retrieveOrder
+
+`freshcom.retrieveOrder(identifiers, [params, options])`
 
 
 
