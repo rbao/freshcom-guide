@@ -14,5 +14,5 @@
 * [Point Account](point-account.md)
 * [Fulfillment & Return](fulfillment.md)
 * Inventory
-* Notification
+* [Notification](notification.md)
 
