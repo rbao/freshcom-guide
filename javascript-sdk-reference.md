@@ -353,6 +353,26 @@ freshcom.setDefaultLocale('zh-CN')
 
 `freshcom.deleteProduct(identifiers, [params, options])`
 
+### .listPrice
+
+`freshcom.listPrice(identifiers, [params, options])`
+
+### .createPrice
+
+`freshcom.createPrice(fields, [params, options])`
+
+### .retrievePrice
+
+`freshcom.retrievePrice(identifiers, [params, options])`
+
+### .updatePrice
+
+`freshcom.updatePrice(identifiers, fields, [params, options])`
+
+### .deletePrice
+
+`freshcom.deletePrice(identifiers, [params, options])`
+
 ### .listProductCollection
 
 `freshcom.listProductCollection([params, options])`
@@ -384,4 +404,230 @@ freshcom.setDefaultLocale('zh-CN')
 ### .updateProductCollectionMembership
 
 `freshcom.updateProductCollectionMembership(identifiers, fields, [params, options])`
+
+### .deleteProductCollectionMembership
+
+`freshcom.deleteProductCollectionMembership(identifiers, [params, options])`
+
+## CRM
+
+### .listCustomer
+
+`freshcom.listCustomer([params, options])`
+
+### .createCustomer
+
+`freshcom.createCustomer(fields, [params, options])`
+
+### .retrieveCustomer
+
+`freshcom.retrieveCustomer(identifiers, [params, options])`
+
+### .retrieveCurrentCustomer
+
+`freshcom.retrieveCurrentCustomer([params, options])`
+
+### .updateCustomer
+
+`freshcom.updateCustomer(identifiers, fields, [params, options])`
+
+### .deleteCustomer
+
+`freshcom.deleteCustomer(identifiers, [params, options])`
+
+### .listPointTransaction
+
+`freshcom.listPointTransaction(identifiers, [params, options])`
+
+### .createPointTransaction
+
+`freshcom.createPointTransaction(fields, [params, options])`
+
+### .deletePointTransaction
+
+`freshcom.deletePointTransaction(identifiers, [params, options])`
+
+## Balance
+
+### .listCard
+
+`freshcom.listCard([params, options])`
+
+### .updateCard
+
+`freshcom.updateCard(identifiers, [params, options])`
+
+### .deleteCard
+
+`freshcom.deleteCard(identifiers, [params, options])`
+
+### .listPayment
+
+`freshcom.listPayment([params, options])`
+
+### .createPayment
+
+`freshcom.createPayment(fields, [params, options])`
+
+### .retrievePayment
+
+`freshcom.retrievePayment(identifiers, [params, options])`
+
+### .updatePayment
+
+`freshcom.updatePayment(identifiers, fields, [params, options])`
+
+### .deletePayment
+
+`freshcom.deletePayment(identifiers, [params, options])`
+
+### .listRefund
+
+`freshcom.listRefund([params, options])`
+
+### .createRefund
+
+`freshcom.createRefund(identifiers, fields, [params, options])`
+
+## Fulfillment
+
+### .listFulfillmentPackage
+
+`freshcom.listFulfillmentPackage([params, options])`
+
+### .deleteFulfillmentPackage
+
+`freshcom.deleteFulfillmentPackage(identifiers, [params, options])`
+
+### .updateFulfillmentItem
+
+`freshcom.updateFulfillmentItem(identifiers, fields, [params, options])`
+
+### .listReturnPackage
+
+`freshcom.listReturnPackage([params, options])`
+
+### .createReturnItem
+
+`freshcom.createReturnItem(fields, [params, options])`
+
+## Goods
+
+### .listStockable
+
+`freshcom.listStockable([params, options])`
+
+### .createStockable
+
+`freshcom.createStockable(fields, [params, options])`
+
+### .retrieveStockable
+
+`freshcom.retrieveStockable(identifiers, [params, options])`
+
+### .updateStockable
+
+`freshcom.updateStockable(identifiers, fields, [params, options])`
+
+### .deleteStockable
+
+`freshcom.deletStockable(identifiers, [params, options])`
+
+### .listUnlockable
+
+`freshcom.listUnlockable([params, options])`
+
+### .createUnlockable
+
+`freshcom.createUnlockable(fields, [params, options])`
+
+### .retrieveUnlockable
+
+`freshcom.retrieveUnlockable(identifiers, [params, options])`
+
+### .updateUnlockable
+
+`freshcom.updateUnlockable(identifiers, fields, [params, options])`
+
+### .deleteUnlockable
+
+`freshcom.deleteUnlockable(identifiers, [params, options])`
+
+### .listDepositable
+
+`freshcom.listDepositable([params, options])`
+
+### .createDepositable
+
+`freshcom.createDepositable(fields, [params, options])`
+
+### .retrieveDepositable
+
+`freshcom.retrieveDepositable(identifiers, [params, options])`
+
+### .updateDepositable
+
+`freshcom.updateDepositable(identifiers, fields, [params, options])`
+
+### .deleteDepositable
+
+`freshcom.deleteDepositable(identifiers, [params, options])`
+
+## File Storage
+
+### .listFile
+
+`freshcom.listFile([params, options])`
+
+### .createFile
+
+`freshcom.createFile(fields, [params, options])`
+
+### .retrieveFile
+
+`freshcom.retrieveFile(identifiers, [params, options])`
+
+### .updateFile
+
+`freshcom.updateFile(identifiers, fields, [params, options])`
+
+### .uploadFile
+
+`freshcom.uploadFile(fields, [params, options])`
+
+### .deleteFile
+
+`freshcom.deleteFile(identifiers, [params, options])`
+
+### .listFileCollection
+
+`freshcom.listFileCollection([params, options])`
+
+### .createFileCollection
+
+`freshcom.createFileCollection(fields, [params, options])`
+
+### .retrieveFileCollection
+
+`freshcom.retrieveFileCollection(identifiers, [params, options])`
+
+### .updateFileCollection
+
+`freshcom.updateFileCollection(identifiers, fields, [params, options])`
+
+### .deleteFileCollection
+
+`freshcom.deleteFileCollection(identifiers, [params, options])`
+
+### .listFileCollectionMembership
+
+`freshcom.listFileCollectionMembership(identifiers, [params, options])`
+
+### .updateFileCollectionMembership
+
+`freshcom.updateFileCollectionMembership(identifiers, fields, [params, options])`
+
+### .deleteFileCollectionMembership
+
+`freshcom.deleteFileCollectionMembership(identifiers, [params, options])`
 
