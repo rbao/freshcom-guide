@@ -631,3 +631,65 @@ freshcom.setDefaultLocale('zh-CN')
 
 `freshcom.deleteFileCollectionMembership(identifiers, [params, options])`
 
+## Notification
+
+### .listEmail
+
+`freshcom.listEmail([params, options])`
+
+### .listEmailTemplate
+
+`freshcom.listEmailTemplate([params, options])`
+
+### .createEmailTemplate
+
+`freshcom.createEmailTemplate(fields, [params, options])`
+
+### .retrieveEmailTemplate
+
+`freshcom.retrieveEmailTemplate(identifiers, [params, options])`
+
+### .updateEmailTemplate
+
+`freshcom.updateEmailTemplate(identifiers, fields, [params, options])`
+
+### .deleteEmailTemplate
+
+`freshcom.deleteEmailTemplate(identifiers, [params, options])`
+
+### .listSmsTemplate
+
+`freshcom.listSmsTemplate([params, options])`
+
+### .createSmsTemplate
+
+`freshcom.createSmsTemplate(fields, [params, options])`
+
+### .retrieveSmsTemplate
+
+`freshcom.retrieveSmsTemplate(identifiers, [params, options])`
+
+### .updateSmsTemplate
+
+`freshcom.updateSmsTemplate(identifiers, fields, [params, options])`
+
+### .deleteSmsTemplate
+
+`freshcom.deleteSmsTemplate(identifiers, [params, options])`
+
+### .listNotificationTrigger
+
+`freshcom.listNotificationTrigger([params, options])`
+
+### .createNotificationTrigger
+
+`freshcom.createNotificationTrigger(fields, [params, options])`
+
+### .retrieveNotificationTrigger
+
+`freshcom.retrieveNotificationTrigger(identifiers, [params, options])`
+
+### .deleteNotificationTrigger
+
+`freshcom.deleteNotificationTrigger(identifiers, [params, options])`
+
