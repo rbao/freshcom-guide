@@ -307,5 +307,81 @@ freshcom.setDefaultLocale('zh-CN')
 
 `freshcom.retrieveOrder(identifiers, [params, options])`
 
+### .updateOrder
 
+`freshcom.updateOrder(identifiers, fields, [params, options])`
+
+### .deleteOrder
+
+`freshcom.deleteOrder(identifiers, [params, options])`
+
+### .listOrderLineItem
+
+`frescom.listOrderLineItem([params, options])`
+
+### .createOrderLineItem
+
+`freshcom.createOrderLineItem(fields, [params, options])`
+
+### .updateOrderLineItem
+
+`freshcom.updateOrderLineItem(identifiers, fields, [params, options])`
+
+### .deleteOrderLineItem
+
+`freshcom.deleteOrderLineItem(identifiers, [params, options])`
+
+## Catalogue
+
+### .listProduct
+
+`freshcom.listProduct([params, options])`
+
+### .createProduct
+
+`freshcom.createProduct(fields, [params, options])`
+
+### .retrieveProduct
+
+`freshcom.retrieveProduct(identifiers, [params, options])`
+
+### .updateProduct
+
+`freshcom.updateProduct(identifiers, fields, [params, options])`
+
+### .deleteProduct
+
+`freshcom.deleteProduct(identifiers, [params, options])`
+
+### .listProductCollection
+
+`freshcom.listProductCollection([params, options])`
+
+### .createProductCollection
+
+`freshcom.createProductCollection(fields, [params, options])`
+
+### .retrieveProductCollection
+
+`freshcom.retrieveProductCollection(identifiers, [params, options])`
+
+### .updateProductCollection
+
+`freshcom.updateProductCollection(identifiers, fields, [params, options])`
+
+### .deleteProductCollection
+
+`freshcom.deleteProductCollection(identifiers, [params, options])`
+
+### .listProductCollectionMembership
+
+`freshcom.listProductCollectionMembership(identifiers, [params, options])`
+
+### .createProductCollectionMembership
+
+`freshcom.createProductCollectionMembership(fields, [params, options])`
+
+### .updateProductCollectionMembership
+
+`freshcom.updateProductCollectionMembership(identifiers, fields, [params, options])`
 
