@@ -2,6 +2,10 @@
 
 Product in Freshcom represents goods for sell. Its essentially goods with a price. In order to create a product you must create a goods first. Please see our guide on [goods](../untitled-1.md) for how to create one. Freshcom give you various way to sell your goods through different kind of products. There are 3 main kinds of product.
 
+* Simple Product
+* Product with Variants
+* Product Combo
+
 ## Simple Product
 
 As the name suggest a simple product is a product in its simplest form. Simple product connects directly to a goods and must have at least one price in order to be activated.
