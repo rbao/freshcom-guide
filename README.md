@@ -1,24 +1,6 @@
 # Documentation
 
-
-
-{% tabs %}
-{% tab title="Create a product" %}
-Your content goes here.
-{% endtab %}
-
-{% tab title="Create a cart" %}
-test
-{% endtab %}
-
-{% tab title="Add to cart" %}
-
-{% endtab %}
-
-{% tab title="Checkout" %}
-
-{% endtab %}
-{% endtabs %}
+Welcome to the Freshcom Documentation, please navigate using the left nav to view
 
 
 
