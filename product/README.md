@@ -1,6 +1,6 @@
 # Product
 
-Product in Freshcom represents goods for sell. Its essentially goods with a price. In order to create a product you must create a goods first. Please see our guide on [goods](../untitled-1.md) for how to create one. Freshcom give you various way to sell your goods through different kind of products. There are 3 main kinds of product.
+Product in Freshcom represents goods for sell. Its essentially goods with a price. In order to create a product you must create a goods first. Please see our guide on [goods](../goods.md) for how to create one. Freshcom give you various way to sell your goods through different kind of products. There are 3 main kinds of product.
 
 * Simple Product
 * Product with Variants
@@ -49,7 +49,7 @@ You can created and activate a product through the Dashboard. Only user with spe
 
 {% page-ref page="price.md" %}
 
-{% page-ref page="../signing-up-customer/" %}
+{% page-ref page="../from-cart-to-checkout/" %}
 
 
 

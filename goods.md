@@ -25,7 +25,7 @@ You can use the Dashboard to setup those resources.
 
 ### Unlock a Unlockable
 
-Once you have the required resource setup you can then access the unlockable product in your client side application on behalf of a customer. You can implement your checkout as normal following the guide [from cart to checkout](signing-up-customer/) with one important difference: in order to checkout a cart with unlockable product you must use a user access token. If you use a publishable access token you will get an error because Freshcom does not know which customer to unlock the unlockable for.
+Once you have the required resource setup you can then access the unlockable product in your client side application on behalf of a customer. You can implement your checkout as normal following the guide [from cart to checkout](from-cart-to-checkout/) with one important difference: in order to checkout a cart with unlockable product you must use a user access token. If you use a publishable access token you will get an error because Freshcom does not know which customer to unlock the unlockable for.
 
 Once a customer checkout their cart with a unlockable product, a auto fulfillment will be created for that specific order line item which will in turn create a unlock for the customer.
 

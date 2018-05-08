@@ -145,7 +145,7 @@ Once a payment is created, the status of cart will be automatically be changed t
 
 {% page-ref page="authorize-payment.md" %}
 
-{% page-ref page="untitled-2.md" %}
+{% page-ref page="line-item-structure.md" %}
 
 {% page-ref page="../fulfillment.md" %}
 

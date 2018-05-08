@@ -28,7 +28,7 @@ You will also set estimate by default to true because when customer checkout the
 
 You will also need to set estimate average percentage so that Freshcom can know how to estimate the correct price for your customer. In this example if on average each fish is 2 LB then you will set estimate average percentage to 200% so that the estimated sub total of the order line item with the fish product will be $20 \* 200% = $40.
 
-You will also need to set estimate maximum percentage so that Freshcom can calculated the authorization total for the order and you use this total to authorize against a customer's card. In this example if the largest fish you ever sold is 3 LB then its safe to set the estimate maximum percentage to 300% so that you can authorize the customer's card for $20 \* 300% = $60. Once you know the exact price of the fish you can then capture that exact amount and release the reset. In this example if the actual weight is 2.5 LB then you will capture $50 out of the authorized $60, and the $10 will be refunded to the customer. Please see our guide on [authorize payment](../signing-up-customer/authorize-payment.md) for detail on how authorization works.
+You will also need to set estimate maximum percentage so that Freshcom can calculated the authorization total for the order and you use this total to authorize against a customer's card. In this example if the largest fish you ever sold is 3 LB then its safe to set the estimate maximum percentage to 300% so that you can authorize the customer's card for $20 \* 300% = $60. Once you know the exact price of the fish you can then capture that exact amount and release the reset. In this example if the actual weight is 2.5 LB then you will capture $50 out of the authorized $60, and the $10 will be refunded to the customer. Please see our guide on [authorize payment](../from-cart-to-checkout/authorize-payment.md) for detail on how authorization works.
 
 ## Wholesale Pricing
 
@@ -43,7 +43,7 @@ Now when you create a order line item with order quantity 10 for the t-shirt pro
 
 ## Next Steps
 
-{% page-ref page="../signing-up-customer/" %}
+{% page-ref page="../from-cart-to-checkout/" %}
 
 
 

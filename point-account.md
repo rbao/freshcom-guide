@@ -14,7 +14,7 @@ There are two ways to create point account for a customer.
 There are mainly 3 ways to deposit into a point account.
 
 1. Manually create a committed point transaction for the point account through the Dashboard.
-2. Use a depositable to allow customer to deposit by paying for a depositable product. For details please see our guide on [using a depositable](untitled-1.md#using-a-depositable).
+2. Use a depositable to allow customer to deposit by paying for a depositable product. For details please see our guide on [using a depositable](goods.md#using-a-depositable).
 3. _\(coming soon\)_ Specify the points on the price of a product and whenever customer checkout an order with that price a point transaction matching those point will be automatically created and committed.
 
 ## Spend Points
