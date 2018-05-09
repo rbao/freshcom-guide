@@ -4,7 +4,7 @@ Freshcom provides you with a few fulfillment related resources for you to implem
 
 ## Fulfillment
 
-Each order in Freshcom is require fulfillment, order is considered fulfilled when each of its top level order line item is fulfilled. A order line item with children is considered fulfilled if all of its children is fulfilled. A order line item without children is considered fulfilled when the sum of the quantity of all its fulfillment items is greater than or equal to the order quantity of the order line item. Below is a diagram illustrating an example fulfillment for a order. Green block in the diagram represent the top level order line items. Click to zoom in.
+Each order in Freshcom require fulfillment, order is considered fulfilled when each of its top level order line item is fulfilled. A order line item with children is considered fulfilled if all of its children is fulfilled. A order line item without children is considered fulfilled when the sum of the quantity of all its fulfillment items is greater than or equal to the order quantity of the order line item. Below is a diagram illustrating an example fulfillment for a order. Green block in the diagram represent the top level order line items. Click to zoom in.
 
 ![](.gitbook/assets/fulfillment-1.png)
 
